@@ -1,3 +1,9 @@
+# revision 19445
+# category Package
+# catalog-ctan /fonts/cm-unicode
+# catalog-date 2010-07-13 15:28:23 +0200
+# catalog-license ofl
+# catalog-version 0.7.0
 Name:		texlive-cm-unicode
 Version:	0.7.0
 Release:	1
@@ -174,6 +180,7 @@ support OpenType features, such as XeTeX and LuaTeX.
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/cmunrm.pdf
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/cmunti.pdf
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/config.cmu
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -184,3 +191,5 @@ support OpenType features, such as XeTeX and LuaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
