@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Computer Modern Unicode fonts were converted from metafont
@@ -32,20 +30,12 @@ AFM, PFB and OTF versions; the OTF version of the Computer
 Modern Unicode fonts works with TeX engines that directly
 support OpenType features, such as XeTeX and LuaTeX.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -181,7 +171,6 @@ support OpenType features, such as XeTeX and LuaTeX.
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/cmunrm.pdf
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/cmunti.pdf
 %doc %{_texmfdistdir}/doc/fonts/cm-unicode/config.cmu
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -192,5 +181,3 @@ support OpenType features, such as XeTeX and LuaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
