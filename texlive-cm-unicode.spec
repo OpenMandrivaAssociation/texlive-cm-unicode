@@ -181,3 +181,18 @@ support OpenType features, such as XeTeX and LuaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.7.0-2
++ Revision: 750330
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.7.0-1
++ Revision: 718088
+- texlive-cm-unicode
+- texlive-cm-unicode
+- texlive-cm-unicode
+- texlive-cm-unicode
+- texlive-cm-unicode
+
