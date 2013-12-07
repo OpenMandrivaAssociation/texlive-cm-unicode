@@ -6,7 +6,7 @@
 # catalog-version 0.7.0
 Name:		texlive-cm-unicode
 Version:	0.7.0
-Release:	4
+Release:	5
 Summary:	Computer Modern Unicode font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cm-unicode
