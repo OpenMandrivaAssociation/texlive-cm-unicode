@@ -5,8 +5,8 @@ Summary:	Computer Modern Unicode font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cm-unicode
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.r58661.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.doc.r58661.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
