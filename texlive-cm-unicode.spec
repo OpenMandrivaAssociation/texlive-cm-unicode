@@ -1,18 +1,12 @@
-# revision 19445
-# category Package
-# catalog-ctan /fonts/cm-unicode
-# catalog-date 2010-07-13 15:28:23 +0200
-# catalog-license ofl
-# catalog-version 0.7.0
 Name:		texlive-cm-unicode
-Version:	0.7.0
-Release:	11
+Version:	58661
+Release:	1
 Summary:	Computer Modern Unicode font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cm-unicode
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.r58661.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.doc.r58661.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,12 +25,12 @@ Modern Unicode fonts works with TeX engines that directly
 support OpenType features, such as XeTeX and LuaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -174,25 +168,10 @@ support OpenType features, such as XeTeX and LuaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.7.0-2
-+ Revision: 750330
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.7.0-1
-+ Revision: 718088
-- texlive-cm-unicode
-- texlive-cm-unicode
-- texlive-cm-unicode
-- texlive-cm-unicode
-- texlive-cm-unicode
-
