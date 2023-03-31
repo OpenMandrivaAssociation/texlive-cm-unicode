@@ -1,6 +1,6 @@
 Name:		texlive-cm-unicode
 Version:	58661
-Release:	1
+Release:	2
 Summary:	Computer Modern Unicode font family
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cm-unicode
