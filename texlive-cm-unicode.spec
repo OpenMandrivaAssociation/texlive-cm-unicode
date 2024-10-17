@@ -3,7 +3,7 @@ Version:	58661
 Release:	2
 Summary:	Computer Modern Unicode font family
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/cm-unicode
+URL:		https://www.ctan.org/tex-archive/fonts/cm-unicode
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cm-unicode.doc.r%{version}.tar.xz
